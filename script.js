@@ -35,5 +35,48 @@ Monitorar a execução do código através do console é fundamental para detect
 
 */
 
+/* Conceito de variável: 
+Na programação a variável fuciona como uma espécie de caixa onde podem ser armazenados divesos tipos de dados, dentre os quais incluem strings, números, booleanos entre outros.
+
+As variáveis são fundamentais para criação de algorítimos eficientes, uma vez que determinados dados serão utilizados repetidas vezes dentro de determinado programa. 
+*/
+
+/* Conceito de variável descrita pelo Chat GPT:
+
+Uma variável em programação é um espaço de memória reservado para armazenar um valor que pode ser modificado durante a execução do programa. Uma variável é uma forma de identificar um local na memória do computador onde podemos armazenar um valor específico e fazer referência a esse valor em outras partes do programa.
+
+As variáveis são usadas para armazenar dados temporários ou permanentes em um programa de computador. Os tipos de dados que podem ser armazenados em uma variável incluem números, strings, caracteres, booleanos, entre outros.
+
+Ao declarar uma variável, o programador deve especificar o tipo de dado que será armazenado na variável, bem como um nome único para identificar a variável no programa. Durante a execução do programa, o valor da variável pode ser atualizado ou modificado conforme necessário, permitindo que o programa reaja dinamicamente às entradas ou mudanças no ambiente em que está sendo executado.
+
+Em resumo, as variáveis são elementos fundamentais em programação, pois permitem que os programas armazenem e manipulem dados dinamicamente, tornando o programa mais flexível e adaptável às necessidades do usuário e às condições do ambiente em que está sendo executado.*/
+
+/* Declaranado uma variável com javascript: */
+
+var variavel;
+
+variavel = 2;
+
+console.log(variavel); // será impresso o número 2 na tela.
+
+/* A variável também pode ser declarada da seguinte forma */;
+
+var segundaVariavel = 'Número Três!';
+
+console.log(segundaVariavel); // será impresso a string 'Número Três' na tela.
+
+/* Atribuindo novo valor a variável */
+
+variavel = 20;
+
+console.log(variavel); // será impresso o número 20 na tela.
+
+/* Uma variável também pode receber outra variável */
+
+variavel = segundaVariavel;
+
+console.log(variavel); // será impresso a string 'Número Três' na tela;
+
+
 
 
