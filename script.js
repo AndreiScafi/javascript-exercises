@@ -207,6 +207,55 @@ console.log(boleano); //Será impresso o valor boelano 'true' indicando trantar-
 
 console.log(!boleano); //Será impresso o valor boelano 'false' indicando trantar-se de um proposição falsa, devido a utilização do sinal de exclamação indicando a inversão do valor declarado. 
 
+// OPERAÇÕES ARITMÉTICAS
+
+// + Adição.
+
+var adicao = 1 + 1;
+
+
+// - Subtração.
+
+var subtracao = 1 - 1;
+
+
+// * Multiplicação.
+
+var multiplicacao = 10 * 10;
+
+
+// / Divisão.
+
+var divisao = 10 / 10;
+
+
+// % Módulo.
+
+// resulta no resto de uma operação de divisão.
+
+var moduloPar = 2 % 2;
+
+console.log(moduloPar); // será mostrado 0 na tela;
+
+var moduloImpar = 3 % 2;
+
+console.log(moduloImpar); // será mostrado 1 na tela;
+
+// ++ Incremento.
+
+var incremento = 1;
+
+incremento++;
+
+console.log(incremento)// será mostrado 2 na tela, pois o valor original foi incrementado em 1;
+
+// -- Decremento.
+
+var decremento = 2;
+
+decremento--;
+
+console.log(decremento); // será mostrado 1 na tela, pois o valor original foi decrementado em 1;
 
 
 
