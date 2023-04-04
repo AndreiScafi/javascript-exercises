@@ -231,7 +231,7 @@ var divisao = 10 / 10;
 
 // % Módulo.
 
-// resulta no resto de uma operação de divisão.
+// retorna no resto de uma operação de divisão.
 
 var moduloPar = 2 % 2;
 
@@ -256,6 +256,14 @@ var decremento = 2;
 decremento--;
 
 console.log(decremento); // será mostrado 1 na tela, pois o valor original foi decrementado em 1;
+
+// A ordem do incremento e decremento importa.
+
+var alfa = 1;
+
+var beta = alfa++; // Nesse caso beta será 1 pois primeiro ele recebeu o valor original de alfa, e somente depois o alfa foi incrementado. Note que o alfa foi incrementado e agora vale 2.
+
+var beta = ++alfa; // Nesse caso primeiro o alfa é incremntado passando a valer 3, e depois o valor é atribuído à beta. Nesse caso alfa e beta tem o mesmo valor e ambos retornam 3.
 
 
 
