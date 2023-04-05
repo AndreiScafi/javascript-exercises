@@ -265,5 +265,58 @@ var beta = alfa++; // Nesse caso beta será 1 pois primeiro ele recebeu o valor 
 
 var beta = ++alfa; // Nesse caso primeiro o alfa é incremntado passando a valer 3, e depois o valor é atribuído à beta. Nesse caso alfa e beta tem o mesmo valor e ambos retornam 3.
 
+// Atribuições:
+
+// '=' Esse é o sinal de atribuição no Javascript. 
+
+var a1 = 1;
+
+a1++; // pode ser escrito como: a1 = a1 + 1 ou a1 += 1;
+
+console.log(a1); // será impresso o número 2 no console. 
+
+//O valor não precisa ser 1;
+
+a1 += 8;
+
+console.log(a1); // será impresso o número 10 no console. 
+
+// outras operações possíveis:
+
+//subtração;
+
+a1 -= 9;
+
+console.log(a1)// Será impreso o número 1 na tela como resultado da subitração;
+
+//multiplicação;
+
+a1 *= 5;
+
+console.log(a1)// Será impreso o número 5 na tela como resultado da multiplicação;
+
+//divisão;
+
+a1 /= 5;
+
+console.log(a1)// Será impreso o número 5 na tela como resultado da divisão;
+
+//módulo;
+
+a1 %= 1;
+
+console.log(a1)// Será impreso o número 0 na tela como resultado da operação do módulo;
+
+
+// Resumo das atribuições possíveis:
+
+// =    x = y   x = y
+// +=   x += y  x = x + y
+// -=   x -= y  x = x - y
+// *=   x *= y  x = x * y
+// /=   x /= y  x = x / y
+// %=   x %= y  x = x % y
+
+
 
 
