@@ -318,5 +318,57 @@ console.log(a1)// Será impreso o número 0 na tela como resultado da operação
 // %=   x %= y  x = x % y
 
 
+// Operadores de comparação:
+// Operadores de comparação realizam uma comparação e retornam um valor boeleano 'true' or 'false'.
+
+// '==' compara a igualdade entre os valores. Não diferencia números de strings.
+
+let boleano1 = (1 == '1');
+
+console.log(boleano1);// Será impresso 'true' no console, pois o comparador '==' não diferencia number e string.
+
+// '===' compara a igualdade entre os valores e também compara o tipo de dado. Ou seja irá diferenciar números de strings.
+
+boleano1 = (1 === '1');
+
+console.log(boleano1); // Será impresso 'false' no console, pois o comparador '===' diferencia number e string.
+
+// '!=' compara a diferença entre os valores, se os valores forem diferentes ele irá retornar verdadeiro, mas se os valores forem iguais retornará fals. Assim como o '==' o '!=' não diferencia number de string.
+
+boleano1 = (1 != '1');
+
+console.log(boleano1); // Irá retornar falso, pois o operador entende que os valores são iguais, uma vez que não diferencia number de string. 
+
+// '!==' compara a diferença entre os valores e o tipo de dado, se os valores ou o tipo de dado forem diferentes ele irá retornar verdadeiro, mas se os valores forem iguais retornará fals. Assim como o '===' o '!==' diferencia number de string.
+
+boleano1 = (1 !== '1');
+
+console.log(boleano1); // Irá retornar verdadeiro, pois o operador entende que os valores são diferentes, uma vez que  diferencia number de string. 
+
+// '>' compara se o valor é maior. Caso o valor seja maior irá retornar verdadeiro. 
+
+boleano1 = (5 > 1);
+
+console.log(boleano1); // irá retornar verdadeiro, pois 5 é maior que 1;
+
+// '<' compara se o valor é menor. Caso o valor seja menor irá retornar verdadeiro. 
+
+boleano1 = (5 < 1);
+
+console.log(boleano1); // irá retornar falso, pois 5 é maior que 1;
+
+// '>=' compara se o valor é maior ou igual. Caso o valor seja maior ou igual irá retornar verdadeiro. 
+
+boleano1 = (5 >= 5);
+
+console.log(boleano1); // irá retornar verdadeiro, pois 5 é igual a 5;
+
+// '<=' compara se o valor é menor ou igual. Caso o valor seja menor ou igual irá retornar verdadeiro. 
+
+boleano1 = (5 <= 1);
+
+console.log(boleano1); // irá retornar falso, pois 5 é maior e diferente de 1;
+
+
 
 
