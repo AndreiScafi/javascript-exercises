@@ -370,5 +370,25 @@ boleano1 = (5 <= 1);
 console.log(boleano1); // irá retornar falso, pois 5 é maior e diferente de 1;
 
 
+// Operadores Lógicos:
+
+// Operadores lógicos servem para verificar o retorno de um valor boleano. 
+
+var A = true;
+
+var B = false;
+
+// '&&' este operador lógico, significa 'and' e verfica a ocorrência simultânea de dois valores boleanos condicionados.
+
+var c = A && B;
+
+console.log(c); // Será impresso 'false' no console, pois 'A' é true e 'B' é false, impossibilitando a ocorrência simultânea de ambos como true.
+
+// '||' este operador lógico significa 'or', e verifica a ocorrência simultânea ou não de valores boleanos condicionados. 
+
+c = A || B;
+
+console.log(c); // Será impresso 'true' no console, pois o 'A' é true, não necessitando da ocorrência simultanea de 'B' como true. 
+
 
 
