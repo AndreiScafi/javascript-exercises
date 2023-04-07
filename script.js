@@ -384,11 +384,37 @@ var c = A && B;
 
 console.log(c); // Será impresso 'false' no console, pois 'A' é true e 'B' é false, impossibilitando a ocorrência simultânea de ambos como true.
 
+// Aplicação em caso prático:
+
+var idade = 25;
+
+var maior20 = idade > 20;
+var menor30 = idade < 30;
+
+var idadeAdmitida = maior20 && menor30;
+
+if (idadeAdmitida) {
+    console.log('Você tem ' + idade + ' anos, portanto você pode se inscrever no concurso.')
+}
+
 // '||' este operador lógico significa 'or', e verifica a ocorrência simultânea ou não de valores boleanos condicionados. 
 
 c = A || B;
 
 console.log(c); // Será impresso 'true' no console, pois o 'A' é true, não necessitando da ocorrência simultanea de 'B' como true. 
+
+// Aplicação em caso prático:
+
+idade = 65;
+
+var menor18 = idade < 18;
+var maior60 = idade > 60;
+
+var meiaEntrada = menor18 || maior60;
+
+if (meiaEntrada) {
+    console.log('Você tem ' + idade + ' anos, portanto você tem direito a meia entrada.')
+}
 
 
 
