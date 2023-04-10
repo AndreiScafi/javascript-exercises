@@ -499,3 +499,44 @@ b = '6.5';
 c = parseFloat(a) + parseFloat(b);
 
 console.log(c);// Após o uso da função parseFloat, as Strings se tranformam em numbers e a operação de adição pode ser realizada, retornando o number 10.
+
+// Alert:
+
+/*
+Alert Conceito: é uma função embutida que exibe uma mensagem na forma de uma caixa de diálogo para o usuário. Essa caixa de diálogo é exibida como uma janela pop-up no navegador da web.
+
+A função alert() é geralmente usada para fornecer feedback imediato ao usuário em uma página da web. Por exemplo, você pode usar alert() para exibir uma mensagem de erro se o usuário inserir informações incorretas em um formulário.
+
+A sintaxe básica da função alert() é simples. Basta passar a mensagem que você deseja exibir entre parênteses.
+*/
+
+//alert('Isso é um alert');
+
+//Prompt:
+
+/* 
+Prompt conceito:  é uma função embutida que exibe uma caixa de diálogo para o usuário inserir um valor. Essa caixa de diálogo é exibida como uma janela pop-up no navegador da web e contém uma mensagem de texto, uma caixa de entrada de texto para o usuário inserir um valor e botões "OK" e "Cancelar".
+
+A função prompt() é geralmente usada para solicitar entrada do usuário em uma página da web. Por exemplo, você pode usar prompt() para solicitar que o usuário insira seu nome ou outras informações relevantes em um formulário.
+
+A sintaxe básica da função prompt() é simples. Basta passar a mensagem que você deseja exibir ao usuário como um argumento entre parênteses.
+
+É importante notar que o valor retornado pela função prompt() é sempre uma string, mesmo que o usuário insira um número ou outro tipo de dado na caixa de entrada de texto. Se você precisar converter o valor para outro tipo de dado, como um número inteiro, pode usar a função parseInt() ou parseFloat() para fazer a conversão.
+
+Também é importante notar que a função prompt() é uma forma de entrada do usuário e, portanto, pode ser vulnerável a ataques de segurança, como injeção de código malicioso ou roubo de informações pessoais. Por isso, é importante validar e sanitizar qualquer entrada do usuário antes de usá-la em seu código.
+*/
+
+//Utilização prática de alert e prompt:
+
+var nomePrompt = prompt("Qual é o seu nome?"); // Será exibido um campo para o usuário preencher seu nome. 
+
+alert("Bom dia, " + nomePrompt + "."); // Após preencher o nome será inicializado um pop up com a mensagem "Bom dia + o nome que o usuário preencheu.".
+
+// Utilização mais avançada. 
+
+numeroPrompt = prompt("Digite um número");
+
+var dobro = parseFloat(numeroPrompt) * 2;// prompt sempre devolve string, por isso é necessário usar parseFloat. 
+
+alert("O dobro de " + numeroPrompt + ' é ' + dobro + "!")// Será exibido o número escolhido e o seu repectivo dobro. 
+
