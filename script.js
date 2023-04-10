@@ -421,14 +421,51 @@ if (meiaEntrada) {
 
 c = !A;
 
-console.log(c)// Como o valor de A é 'true', c retornará o valor 'false'.
+console.log(c);// Como o valor de A é 'true', c retornará o valor 'false'.
 
 c = !B;
 
-console.log(c)// Como o valor de B é 'false', c retornará o valor 'true'.
+console.log(c);// Como o valor de B é 'false', c retornará o valor 'true'.
 
 //Exemplo mais direto:
 
-console.log(!true)// Irá retornar false;
-console.log(!false)// Irá retornar true;
+console.log(!true);// Irá retornar false;
+console.log(!false);// Irá retornar true;
 
+// Strings: 
+
+// Conceito de string: Em programação, uma string (ou "cadeia de caracteres") é uma sequência de caracteres alfanuméricos (letras, números e outros caracteres) que podem ser usados para representar palavras, frases, sentenças, parágrafos, etc. em um programa.
+
+var string1 = 'Isso é uma string.'
+
+console.log(string1);
+
+// Concatenação de strings.
+
+string1 += ' Essa string sofreu uma concatenação.'
+
+console.log(string1);
+
+// Se a string for composta apenas por números e sofrer uma operação matemática diferente da adicição, o javascript irá transformar a string em um number. 
+
+string1 = '4';
+
+console.log(string1 * 4); //Irá retornar o number 16. Deixará de ser string. 
+
+/*  
+
+Caracteres especiais de uma string.
+
+\n: Representa uma quebra de linha (caractere de nova linha).
+
+\t: Representa um caractere de tabulação.
+
+\\: Representa um caractere de barra invertida (o próprio símbolo de barra invertida precisa ser escapado com outra barra invertida).
+
+\": Representa um caractere de aspas duplas (também precisa ser escapado em strings delimitadas por aspas duplas).
+
+\': Representa um caractere de aspas simples (também precisa ser escapado em strings delimitadas por aspas simples).
+
+Esses caracteres especiais são usados ​​em strings para representar caracteres que não podem ser digitados diretamente no código-fonte ou para representar caracteres especiais que têm um significado específico em JavaScript ou em outras linguagens de programação. 
+
+*/
