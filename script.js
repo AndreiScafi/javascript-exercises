@@ -469,3 +469,33 @@ Caracteres especiais de uma string.
 Esses caracteres especiais são usados ​​em strings para representar caracteres que não podem ser digitados diretamente no código-fonte ou para representar caracteres especiais que têm um significado específico em JavaScript ou em outras linguagens de programação. 
 
 */
+
+// Transformando strings em números:
+
+/* 
+Em JavaScript, parseInt() é uma função embutida que converte uma string em um número inteiro. O nome "parseInt" vem de "parse integer" (analisar inteiro).
+
+A função parseInt() aceita dois argumentos: a string que será convertida em um número e uma base numérica opcional que especifica qual sistema numérico deve ser usado para a conversão. Se nenhum segundo argumento for fornecido, parseInt() assumirá uma base 10 como padrão.
+
+É importante notar que parseInt() tenta converter uma string em um número inteiro, mas se a string não puder ser convertida em um número válido, parseInt() retornará NaN (Not a Number). 
+*/
+
+//Aplicação prática da função parseInt();
+
+a = '3';
+
+b = '6';
+
+c = parseInt(a) + parseInt(b);
+
+console.log(c);// Após o uso da função parseInt, as Strings se tranformam em numbers e a operação de adição pode ser realizada, retornando o number 9.
+
+// Para números reais (quebrados, com casas decimais, diferentes de números inteiros) é necessário usar a função parseFloat.
+
+a = '3.5';
+
+b = '6.5';
+
+c = parseFloat(a) + parseFloat(b);
+
+console.log(c);// Após o uso da função parseFloat, as Strings se tranformam em numbers e a operação de adição pode ser realizada, retornando o number 10.
