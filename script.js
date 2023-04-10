@@ -372,7 +372,7 @@ console.log(boleano1); // irá retornar falso, pois 5 é maior e diferente de 1;
 
 // Operadores Lógicos:
 
-// Operadores lógicos servem para verificar o retorno de um valor boleano. 
+// Operadores lógicos servem para verificar o retorno entre dois valores boleano. 
 
 var A = true;
 
@@ -417,4 +417,18 @@ if (meiaEntrada) {
 }
 
 
+// '!' este operador lógico significa 'Negação', e verifica se determinada variável é falsa, caso seja falsa, ele retornará 'true', mas se a variável indicada for verdadeira ela retornará 'false'. 
+
+c = !A;
+
+console.log(c)// Como o valor de A é 'true', c retornará o valor 'false'.
+
+c = !B;
+
+console.log(c)// Como o valor de B é 'false', c retornará o valor 'true'.
+
+//Exemplo mais direto:
+
+console.log(!true)// Irá retornar false;
+console.log(!false)// Irá retornar true;
 
