@@ -528,6 +528,7 @@ Também é importante notar que a função prompt() é uma forma de entrada do u
 
 //Utilização prática de alert e prompt:
 
+/*  
 var nomePrompt = prompt("Qual é o seu nome?"); // Será exibido um campo para o usuário preencher seu nome. 
 
 alert("Bom dia, " + nomePrompt + "."); // Após preencher o nome será inicializado um pop up com a mensagem "Bom dia + o nome que o usuário preencheu.".
@@ -539,4 +540,42 @@ numeroPrompt = prompt("Digite um número");
 var dobro = parseFloat(numeroPrompt) * 2;// prompt sempre devolve string, por isso é necessário usar parseFloat. 
 
 alert("O dobro de " + numeroPrompt + ' é ' + dobro + "!")// Será exibido o número escolhido e o seu repectivo dobro. 
+*/
+
+// Condicionais:
+
+// 'IF' statment - Estruturas condicionais: 
+
+/* 
+Estruturas condicionais são construções fundamentais na programação que permitem que um programa execute diferentes ações dependendo de uma condição específica. Em outras palavras, elas permitem que um programa tome decisões com base em uma condição que é avaliada como verdadeira ou falsa.
+
+A estrutura condicional mais básica é a declaração "if", que testa se uma determinada condição é verdadeira e, se for, executa uma ou mais instruções.
+
+Além da declaração "if", existem outras estruturas condicionais como "if-else", "if-elif-else" e "switch-case" (em algumas linguagens de programação), que permitem que um programa execute diferentes ações com base em diferentes condições.
+
+As estruturas condicionais são essenciais na programação porque permitem que um programa se adapte e tome decisões com base em diferentes cenários e entradas de usuário. Isso torna os programas mais flexíveis e úteis para o usuário final.
+
+*/
+
+// Aplicação prática da condicional 'IF':
+
+//OBS: Se houver mais de uma linha de comando é preciso usar um bloco de comando usando '{}';
+
+function verificarIdade(idade) {
+    if (idade > 70 || idade < 18) {
+        console.log('Você não pode consumir bebida alcóolica.')
+    } else if (idade >= 35) {
+        console.log('Você pode consumir bebida alcóolica, qual o seu pedido?')
+    } else {
+        console.log('Você pode consumir bebida alcóolica, mostre sua identidade.')
+    };
+}
+
+verificarIdade(18);// Como idade é maior ou igual a 18, porém menor que 35, o console retornará a string 'Você pode consumir bebida alcóolica,  mostre sua identidade.';
+
+verificarIdade(17);// Como idade é menor que 18, o console retornará a string 'Você não pode consumir bebida alcóolica.';
+
+verificarIdade(75);// Como idade é maior que 70, o console retornará a string 'Você não pode consumir bebida alcóolica.';
+
+verificarIdade(35);// Como idade é maior ou igual a 35, o console retornará a string 'Você pode consumir bebida alcóolica, qual o seu pedido?';
 
