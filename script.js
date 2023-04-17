@@ -644,4 +644,86 @@ console.log(MaiorDeDezoito);// Como idade é maior que 19, irá retornar o valor
 
 idade = 17;
 
-console.log(MaiorDeDezoito);// Mesmo a nova idade sendo menor que 18, irá retornar o valor booleano true para o console, pois a operação ternária foi feita quando idade ainda tinha o valor original de 19. 
+console.log(MaiorDeDezoito);// Mesmo a nova idade sendo menor que 18, irá retornar o valor booleano true para o console, pois a operação ternária foi feita quando idade ainda tinha o valor original de 19.
+
+// Condicionais:
+
+// Switch:
+
+// Conceito:
+
+/* 
+uma expressão e executar um bloco de código correspondente a um determinado valor. É uma alternativa ao uso de várias instruções "if-else" encadeadas e pode tornar o código mais legível e fácil de entender.
+
+Onde "expressão" é a expressão a ser avaliada e "valor1", "valor2", "valor3", etc. são os valores possíveis que a expressão pode ter. Se a expressão for igual a um dos valores, o bloco de código correspondente é executado. Se nenhum dos valores corresponder à expressão, o bloco de código dentro da instrução "default" é executado (opcional).
+*/
+
+// Sintaxe do condicional 'switch':
+
+/* 
+switch (key) {
+    case value:
+        
+        break;
+
+        case value:
+        
+        break;
+
+    default:
+        break;
+} 
+*/
+
+// Aplicação prática:
+
+function listaDeTarefas(hora) {
+
+    switch (hora) {
+        case 8:
+            console.log('São 8hrs, Hora de tomar café da manhã.');
+            break;
+        case 9:
+            console.log('São 9hrs, Hora de lavar a louça.');
+            break;
+        case 10:
+            console.log('São 10hrs, Hora de estudar inglês.');
+            break;
+        case 11:
+            console.log('São 11hrs, Hora de estudar GIT.');
+            break;
+        case 12:
+            console.log('São 12hrs, Hora de almoçar.');
+            break;
+        case 13:
+            console.log('São 13hrs, Hora de lavar a louça.');
+            break;
+        case 14:
+            console.log('São 10hrs, Hora de estudar Javascript.');
+            break;
+        case 15:
+            console.log('São 11hrs, Hora de estudar HTML.');
+            break;
+        case 16:
+            console.log('São 11hrs, Hora de estudar CSS.');
+            break;
+        case 17:
+            console.log('São 17hrs, Hora de estudar inglês.');
+            break;
+        case 18:
+            console.log('São 18hrs, Hora de jantar.');
+            break;
+
+        default:
+            console.log('Coloque um valor entre 8 e 18.');
+            break;
+    }
+
+}
+
+listaDeTarefas(6);// O console irá retonar a string 'Coloque um valor entre 8 e 18.';
+
+listaDeTarefas(11);// O console irá retonar a string 'São 11hrs, Hora de estudar GIT.';
+
+listaDeTarefas(15);// O console irá retonar a string 'São 11hrs, Hora de estudar HTML.';
+
