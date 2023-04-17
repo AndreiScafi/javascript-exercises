@@ -557,6 +557,36 @@ As estruturas condicionais são essenciais na programação porque permitem que 
 
 */
 
+// Sintaxe do if statement:
+/* 
+if (condition) {
+    
+}
+*/
+
+// Sintaxe do if-else statement:
+
+/* 
+if (condition) {
+    
+} else {
+    
+} 
+*/
+
+// Sintaxe do if-else statement com else if:
+
+/* 
+if (condition) {
+    
+} else if (condition){
+    
+} else {
+
+}
+*/
+
+
 // Aplicação prática da condicional 'IF':
 
 //OBS: Se houver mais de uma linha de comando é preciso usar um bloco de comando usando '{}';
@@ -579,3 +609,39 @@ verificarIdade(75);// Como idade é maior que 70, o console retornará a string 
 
 verificarIdade(35);// Como idade é maior ou igual a 35, o console retornará a string 'Você pode consumir bebida alcóolica, qual o seu pedido?';
 
+// OPERADOR TERNÁRIO:
+
+// Concieto do operador ternário:
+
+/* 
+O operador ternário é uma expressão condicional que permite escrever uma instrução de forma mais concisa, em vez de utilizar a estrutura condicional "if-else" completa. Ele é utilizado em muitas linguagens de programação para avaliar uma condição e retornar um valor com base nessa condição.
+
+O operador ternário é chamado de "ternário" porque ele possui três operandos: a condição a ser avaliada, o valor a ser retornado se a condição for verdadeira e o valor a ser retornado se a condição for falsa.
+*/
+
+// Sitaxe do operador ternário:
+
+/* 
+condição ? valor_verdadeiro : valor_falso
+*/
+
+// Exemplo prático:
+
+idade = 17;
+
+idade >= 18 ? console.log('Idade é maior que 18.') : console.log('Idade não é maior que dezoito.');// Como idade é 17, irá retornar ao console a string 'Idade não é maior que dezoito.'.
+
+// Operador ternário pode ser colocado dentro de uma variável para retornar um valor booleano. 
+
+idade = 19;
+
+var MaiorDeDezoito = idade >= 18 ? true : false;
+
+
+console.log(MaiorDeDezoito);// Como idade é maior que 19, irá retornar o valor booleano true para o console. 
+
+//OBS: Ficar atento, pois a atribuição do valor da variável deve ser feita antes da atribuição da operação ternária, caso contrário a operação será feita com o valor original e não com o novo valor atribuído. Exemplo:
+
+idade = 17;
+
+console.log(MaiorDeDezoito);// Mesmo a nova idade sendo menor que 18, irá retornar o valor booleano true para o console, pois a operação ternária foi feita quando idade ainda tinha o valor original de 19. 
