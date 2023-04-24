@@ -682,7 +682,7 @@ function listaDeTarefas(hora) {
     switch (hora) {
         case 8:
             console.log('São 8hrs, Hora de tomar café da manhã.');
-            break;
+            break; // break é necessário para interromper a execução do código assim que o critério é atingido. 
         case 9:
             console.log('São 9hrs, Hora de lavar a louça.');
             break;
@@ -726,4 +726,66 @@ listaDeTarefas(6);// O console irá retonar a string 'Coloque um valor entre 8 e
 listaDeTarefas(11);// O console irá retonar a string 'São 11hrs, Hora de estudar GIT.';
 
 listaDeTarefas(15);// O console irá retonar a string 'São 11hrs, Hora de estudar HTML.';
+
+// Outra aplicação prática:
+
+function mediaCalc(nota1, nota2, nota3, nota4) {
+
+    var notas = [nota1, nota2, nota3, nota4];
+
+    var somaNotas = somaArray(notas);
+
+    function somaArray(array) {
+        let total = 0;
+        for (let i = 0; i < array.length; i++) {
+            total += array[i];
+        }
+        return total;
+    }
+
+    var media1 = somaNotas / notas.length;
+
+    return media1;
+}
+
+media = mediaCalc(10, 7.5, 8.0, 6.5);
+
+var conceito = "";
+
+if (media >= 8) {
+    conceito = "ÓTIMO";
+} else if (media >= 6.5) {
+    conceito = "BOM";
+} else {
+    conceito = "REGULAR"
+}
+
+function boletim(m) {
+    switch (m) {
+        case "ÓTIMO":
+            console.log("Sua é média é " + media + " Parabéns, seu conceito é " + conceito + "!");
+            break;
+
+        case "BOM":
+            console.log("Sua é média é " + media + " seu conceito é " + conceito + ", mas você pode melhorar");
+            break;
+
+        case "REGULAR":
+            console.log("Sua é média é " + media + " seu conceito é " + conceito + ", você precisa estudar mais.");
+            break;
+
+        default:
+            console.log("Houve algum erro.")
+            break;
+
+    }
+}
+
+boletim(conceito);
+
+
+
+
+
+
 
