@@ -784,6 +784,41 @@ function boletim(m) {
 boletim(conceito);
 
 
+// Comando/laço de repetição - For-Loop:
+
+// Conceito:
+
+/*
+O for-loop é uma estrutura de repetição em JavaScript que permite que você execute um bloco de código várias vezes, baseado em uma condição ou um conjunto de condições. O for-loop é uma das estruturas de repetição mais utilizadas em JavaScript e é muito útil quando você precisa iterar sobre um conjunto de dados, como um array.
+
+A inicialização é onde você define o valor inicial da variável que será usada no loop.
+
+A condição é a condição que deve ser verdadeira para que o loop continue a ser executado.
+
+O incremento é a operação que será executada após cada iteração do loop, geralmente incrementando ou decrementando a variável que está sendo usada como contador.
+*/
+
+// For-Loop - sintaxe:
+
+/*
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+}
+*/
+
+// Aplicação prática:
+
+function repeticao(n) {
+    for (let i = 1; i <= n; i++) {
+        console.log("Executando o comando de repetição For-Loop pela " + i + "ª vez.");
+    }
+
+    return console.log('O comando de repetição acabou.')
+}
+
+repeticao(5); // O comando de repetição será executado 5 vezes no console, antes de finalizar o Loop. 
+
+
 
 
 
