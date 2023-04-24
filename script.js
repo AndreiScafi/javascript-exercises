@@ -818,6 +818,39 @@ function repeticao(n) {
 
 repeticao(5); // O comando de repetição será executado 5 vezes no console, antes de finalizar o Loop. 
 
+// Comando/laço de repetição - While:
+
+// Conceito:
+
+/*
+O laço de repetição while em JavaScript é outra estrutura de repetição que permite que você execute um bloco de código repetidamente, desde que uma condição seja verdadeira. Ele é geralmente utilizado quando você não sabe quantas vezes um loop precisa ser executado, mas sabe qual é a condição que deve ser atendida para que ele pare de ser executado.
+
+OBS: É preciso tomar cuidado ao utilizar esse laço de repetição, pois caso não seja denido um parâmetro esperado para a finalização da execução do código, o código irá se repetir infinitamente até travar o progrma.
+
+Um loop infinito pode causar problemas sérios em um programa, como travamentos ou sobrecarga do processador, pois o programa ficará preso em um loop sem fim. Para evitar loops infinitos, é importante definir uma condição de saída para o loop, seja com um valor booleano, uma expressão condicional ou uma quebra explícita do loop utilizando a palavra-chave break
+*/
+
+// While - sintaxe:
+
+/* 
+while (condition) {
+    
+}
+ */
+
+// Aplicação prática:
+
+function contagemRegressiva(n) {
+    while (n >= 0) {
+        console.log(n);
+        n--;
+    }
+
+    return console.log('Contagem regressiva encerrada.');
+}
+
+contagemRegressiva(10);// Será impresso uma contagem regressiva iniciando pelo 10, e após imprimir o número zero a contagem será encerrada. 
+
 
 
 
