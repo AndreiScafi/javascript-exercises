@@ -951,14 +951,31 @@ var notas2 = [4.5, 8.0, 2.5, 9.0, 6.0];
 
 var media1 = 5.0;
 
+function mediaDoAluno(n1, n2) {
+    return (n1 + n2) / 2;
+}
+
+function passei(media) {
+    if (media >= media1) {
+        return "Aprovado"
+    } else {
+        return "Reprovado"
+    }
+}
+
 function boletin() {
     for (let i = 0; i < alunos1.length; i++) {
-        mediaDoAluno = (notas1[i] + notas2[i]) / 2;
-        if (mediaDoAluno >= media1) {
-            console.log(alunos[i] + " - 1ª Nota - " + notas1[i] + " - 2ª Nota - " + notas2[i] + " - Média - " + mediaDoAluno + " - Aprovado");
-        } else {
-            console.log(alunos[i] + " - 1ª Nota - " + notas1[i] + " - 2ª Nota - " + notas2[i] + " - Média - " + mediaDoAluno + " - Reprovado");
-        }
+        m = mediaDoAluno(notas1[i], notas2[i]);
+
+        console.log(alunos[i] +
+            " - 1ª Nota - " +
+            notas1[i] +
+            " - 2ª Nota - " +
+            notas2[i] +
+            " - Média - " +
+            m +
+            " - " +
+            passei(m));
     }
 }
 
