@@ -919,7 +919,30 @@ function somaDeValores(a, b) {
     return console.log(a + b);
 }// Aqui a função foi declarada, porém ela somente será executada quando for chamada novamente. 
 
-somaDeValores(5, 10); // A função será executada somando os valores declarandos como parâmetros, retornando ao console o valor da soma, 15 neste caso. 
+somaDeValores(5, 10); // A função será executada somando os valores declarados como argumentos, retornando ao console o valor da soma, 15 neste caso. 
+
+// Função pode ser atribuída como uma variavel.
+
+var resultado = somaDeValores;// Como não foram utilizados parenteses, a função não é executada, e acaba sendo armezenada na variável. 
+
+resultado(5, 5);// Agora a variável, que contem a função, pode ser utilizada como se fosse a função original. Nesse caso a função de soma será executada com os argumentos declrarados na variável. 
+
+
+// Criando um afunção anônima:
+
+var funcaoAnonima = function (a, b) {
+    return console.log(a + b);
+};
+
+funcaoAnonima(2, 2);// A variável irá executar a função anônima, realizando assim a operação de soma com os argumentos que lhe feram passados. 
+
+// Funções também podem ser criadas através de arrow functions:
+
+var arrowFunction = (a, b) => console.log(a + b);// Com a arrow funciton de apenas uma linha não é necessário abrir um bloco de comando. 
+
+arrowFunction(2, 8);// A variável irá excutar a arrow function, realizando assim a operação de soma com os argumentos que lhe forem passados. 
+
+
 
 
 
