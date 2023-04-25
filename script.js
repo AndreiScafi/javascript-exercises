@@ -895,6 +895,36 @@ for (var aluno of alunos) {
     console.log(aluno);// Irá imprimir diretamente o elemento indexado em um laço de repetição. 
 }
 
+// Funções:
+
+// Conceito:
+
+/* 
+Uma função JavaScript nada mais é que um bloco de código que realiza uma tarefa, uma operação, sendo executada quando é chamada por alguém ou invocada.
+
+A grosso modo, a função pode ser entendida como uma variável que executa um bloco de comando. 
+ */
+
+// Sintaxe:
+
+/* 
+function name(params) {
+    
+} 
+*/
+
+// Aplicação prática:
+
+function somaDeValores(a, b) {
+    return console.log(a + b);
+}// Aqui a função foi declarada, porém ela somente será executada quando for chamada novamente. 
+
+somaDeValores(5, 10); // A função será executada somando os valores declarandos como parâmetros, retornando ao console o valor da soma, 15 neste caso. 
+
+
+
+
+
 
 
 
