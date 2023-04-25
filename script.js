@@ -851,6 +851,50 @@ function contagemRegressiva(n) {
 
 contagemRegressiva(10);// Será impresso uma contagem regressiva iniciando pelo 10, e após imprimir o número zero a contagem será encerrada. 
 
+// Arrays
+
+// Conceito:
+
+/* 
+Um array (arranjo ou vetor) é um conjunto de dados (que pode assumir os mais diversos tipos, desde do tipo primitivo, a objeto dependendo da linguagem de programação). Arrays são utilizados para armazenar mais de um valor em uma única variável. Isso é comparável a uma variável que pode armazenar apenas um valor.
+
+Cada item do array tem um número ligado a ele, chamado de índice numérico, que permite acesso a cada "valor" armazenado na váriavel.
+
+OBS: Os elementos de um Array podem ser numbers, strings, booleanos, objects etc...
+
+OBS: O index do array sempre começa pelo número 0; 
+ */
+
+// Sintaxe:
+
+var array = [0, 1, 2, 3, 4, 5];
+
+console.log(array);
+
+var vetor = new Array(0, 1, 2, 3, 4, 5);
+
+console.log(vetor);
+
+// Aplicação prática:
+
+var alunos = ['André', 'Bruno', 'Bernardo', 'João', 'Thales', 'Victor'];
+
+for (let i = 0; i < alunos.length; i++) {
+    console.log(alunos[i]);// A lista de alunos será impressa na ordem do array.
+}
+
+// Outra forma de executar o laço de repetição:
+
+for (var i in alunos) {
+    console.log(alunos[i]);// Também irá imprimir a lista de alunos em um laço de repetição.
+}
+
+// Outra forma de executar o laço de repetição em arrays:
+
+for (var aluno of alunos) {
+    console.log(aluno);// Irá imprimir diretamente o elemento indexado em um laço de repetição. 
+}
+
 
 
 
