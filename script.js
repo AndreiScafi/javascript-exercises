@@ -942,6 +942,28 @@ var arrowFunction = (a, b) => console.log(a + b);// Com a arrow funciton de apen
 
 arrowFunction(2, 8);// A variável irá excutar a arrow function, realizando assim a operação de soma com os argumentos que lhe forem passados. 
 
+// Exercício: Cria uma função que retorne o nome do aluno, a sua nota 1, sua nota 2, a média e se ele foi aprovado ou reprovado. 
+
+var alunos1 = ["Pedro", "Maria", "Fernando", "Felipe", "João"];
+
+var notas1 = [5.5, 6.0, 4.5, 8.0, 3.0];
+var notas2 = [4.5, 8.0, 2.5, 9.0, 6.0];
+
+var media1 = 5.0;
+
+function boletin() {
+    for (let i = 0; i < alunos1.length; i++) {
+        mediaDoAluno = (notas1[i] + notas2[i]) / 2;
+        if (mediaDoAluno >= media1) {
+            console.log(alunos[i] + " - 1ª Nota - " + notas1[i] + " - 2ª Nota - " + notas2[i] + " - Média - " + mediaDoAluno + " - Aprovado");
+        } else {
+            console.log(alunos[i] + " - 1ª Nota - " + notas1[i] + " - 2ª Nota - " + notas2[i] + " - Média - " + mediaDoAluno + " - Reprovado");
+        }
+    }
+}
+
+boletin();
+
 
 
 
