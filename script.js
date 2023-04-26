@@ -981,6 +981,66 @@ function boletin() {
 
 boletin();
 
+// Objetos:
+
+// Conceito: 
+
+/* 
+Em JavaScript, um objeto é uma coleção de propriedades, onde cada propriedade é uma associação entre um nome (ou chave) e um valor. O valor de uma propriedade pode ser uma função, tornando-a um método do objeto.
+
+Em outras palavras, um objeto é uma coleção de propriedades, onde cada propriedade é uma chave (ou nome) que mapeia para um valor. Os valores podem ser qualquer tipo de dados, como strings, números, booleanos, funções, objetos e assim por diante.
+
+Os objetos em JavaScript podem ser criados de diversas formas, como por meio de literais de objetos, por meio da função construtora "Object()" ou por meio de funções construtoras personalizadas.
+*/
+
+// Sintaxe:
+
+var objeto = {
+    prop1: "val1",
+    prop2: "val2",
+    prop3: "val3",
+    prop4: "val4"
+}
+
+var objeto2 = new Object();
+
+objeto2.prop1 = 'val1';
+objeto2.prop2 = 'val2';
+objeto2.prop3 = 'val3';
+
+console.log(objeto2);
+
+// Adicionando novas propriedades:
+
+objeto.prop5 = "val5";// Também poderia ser escrito objeto['prop5'] = "val5"
+
+console.log(objeto);// A propriedade prop5 e o valor val5  foram adicionados ao objeto. 
+
+// É possível moficar apenas o valor da propriedade.
+
+objeto['prop5'] = "val50";// Agora o valor da prop5 é val50;
+
+console.log(objeto);
+
+// Para deletar uma propriedade basta utilizar o seguinte comando:
+
+delete objeto['prop5']; // Tanto a prop5 quanto val50 foram deletados do objeto;
+
+console.log(objeto);
+
+//Utilização prática:
+
+var aluno10 = {
+    nome: "Fernando",
+    notas: [7.5, 6.5]
+}
+
+aluno10.matricula = 12345;
+
+aluno10["sobrenome"] = "Oliveira";
+
+console.log(aluno10);
+
 
 
 
