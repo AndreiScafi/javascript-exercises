@@ -1041,6 +1041,66 @@ aluno10["sobrenome"] = "Oliveira";
 
 console.log(aluno10);
 
+// Adatptando a função do Boletin escolar para utilização com objetos:
+
+var turma1 = [
+    {
+        nome: "Andre",
+        notas: [7.5, 5.5, 6.0, 8.0, 5.0]
+    },
+    {
+        nome: "Felipe",
+        notas: [5.5, 2.5, 4.0, 6.0, 3.0]
+    },
+    {
+        nome: "Maria",
+        notas: [7.5, 9.5, 9.0, 8.5, 10]
+    },
+    {
+        nome: "Joana",
+        notas: [4.5, 1.5, 4.0, 7.0, 3.5]
+    },
+    {
+        nome: "João",
+        notas: [4.5, 5.5, 6.0, 7.0, 3.5]
+    }
+];
+
+function mediaEscolar(notas) {
+    let total = 0;
+    for (let i = 0; i < notas.length; i++) {
+        total += notas[i];
+    }
+    return total / notas.length;
+}
+
+var notas5 = [5, 5, 5, 5];
+
+console.log(mediaEscolar(notas5));
+
+// Nova função Boletim utilizando lista de alunos em Objetos.
+function boletimEscolar(turma) {
+    let aluno = '';
+    let notasBimestrais = [];
+    for (let i = 0; i < turma.length; i++) {
+        aluno = turma[i]['nome'];
+        notasBimestrais = [];
+        for (let j = 0; j < turma[i]['notas'].length; j++) {
+            notasBimestrais.push(turma[i]['notas'][j]);
+            aluno += " - " + (j + 1) + "ª Nota - " + turma[i]['notas'][j];
+        }
+
+        let mediaAluno = mediaEscolar(notasBimestrais);
+        let passeiAluno = passei(mediaAluno);
+
+        console.log(aluno + " - media - " + mediaAluno + " - " + passeiAluno);
+    }
+
+    return "Boletim Escolar";
+}
+
+console.log(boletimEscolar(turma1));
+
 
 
 
