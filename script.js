@@ -1099,9 +1099,36 @@ function boletimEscolar(turma) {
     return "Boletim Escolar";
 }
 
+console.log(turma1);
+
 console.log(boletimEscolar(turma1));
 
+// Objetos - métodos:
 
+// Conceito 
+
+/* 
+Métodos dentro de um objeto, nada mais são que funções dentro da propriedade de um objeto. 
+*/
+
+//Aplicação prática:
+
+function calcMedia() {
+    return (this.notas[0] * 2 + this.notas[1]) / 3;
+}
+
+// O método 'this' dependerá do contexto em que está inserido, como a função será chamada dentro de um objeto, o 'this' irá utilizar a propriedade 'notas' dentro do objeto.
+
+var aluno100 = {
+    nome: "Juan",
+    notas: [5.5, 7.0],
+
+    media: calcMedia
+}
+
+console.log(aluno100.nome)// Será impresso no console o nome "Juan";
+
+console.log(aluno100.media());//Será impresso no console o valor da média 6;
 
 
 
