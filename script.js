@@ -1191,6 +1191,202 @@ console.log(alunoNovo1)
 
 console.log(alunoNovo1.nome + " - " + alunoNovo1.media())// Será impresso no console as informações criadas para o novo aluno - Pedro - 5.75;
 
+//Datas
+
+//Conceito:
+
+/* 
+Em JavaScript, a manipulação de datas é feita usando o objeto Date. O objeto Date representa uma data e hora específicas, e oferece uma variedade de métodos para manipular e exibir datas e horários.
+
+Você pode criar um novo objeto Date de várias maneiras. A maneira mais comum é passando a data e hora desejadas como parâmetros para o construtor Date:
+*/
+
+// sintaxe:
+
+// new Date(year, month, day, hours, minutes, seconds, milliseconds);
+
+// Se somente um parâmtro for informado, a função irá interpretar como milissegundos a partir das 21:00 horas de 31/12/1969 - Fuso horário de brasília GMT-0300.
+
+var d = new Date(1000); // mil milessegundos correponde a um segundo.
+
+console.log("Quando apenas um parâmetro é informado, a função data retornará está data, adicionando o parâmtro informado como milissegundos, portanto será adicionado um segundo a data de 31/12/1969 - 21:00:00 - " + d)
+
+//OBS os meses correspondem a um array com index de 0 a 11, portanto o os meses correspondem a numeração anterior da esperada. Exemplo 8 correponde a setembro e 1 corresponde a fevereiro. 
+
+// Criando um objeto Date com a data atual
+var hoje = new Date();
+
+console.log("data e horário atual: " + hoje); //A data deve ser escrita no padrão americano, ou seja o mês vem antes do dia. 
+
+// Criando um objeto Date com a data e hora especificadas
+var natal = new Date(2023, 11, 25, 0, 0, 0, 0); // 25 de dezembro de 2023 às 00:00:00
+
+console.log("data e horário específico, neste caso meia noite de natal: " + natal);
+
+//Uma vez que você tenha um objeto Date, pode acessar e modificar suas propriedades, como a data, hora, minutos, segundos e milissegundos:
+
+var agora = new Date();
+
+console.log(agora.getFullYear()); // Retorna o ano atual (ex: 2023)
+console.log(agora.getMonth()); // Retorna o mês atual (de 0 a 11, sendo 0 = janeiro)
+console.log(agora.getDate()); // Retorna o dia do mês atual (de 1 a 31)
+console.log(agora.getHours()); // Retorna a hora atual (de 0 a 23)
+console.log(agora.getMinutes()); // Retorna os minutos atuais (de 0 a 59)
+console.log(agora.getSeconds()); // Retorna os segundos atuais (de 0 a 59)
+console.log(agora.getMilliseconds()); // Retorna os milissegundos atuais (de 0 a 999)
+console.log(agora.getDay()); // Retorna um index de 0 a 6 correspondente ao dia da semana - para funcionar adequadamente é preciso criar um array com os dias da semana;
+
+var diasDaSemana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabádo'];
+console.log('Irá imprimir o dia da semana - ' + diasDaSemana[agora.getDay()]);
+
+//Você também pode usar os métodos set para definir uma data e hora específicas em um objeto Date:
+
+var data = new Date();
+data.setFullYear(2024);
+data.setMonth(6); // mês de julho (de 0 a 11)
+data.setDate(15);
+data.setHours(13);
+data.setMinutes(30);
+data.setSeconds(0);
+data.setMilliseconds(0);
+
+console.log(data); // Sat Jul 15 2024 13:30:00 GMT-0300 (Horário Padrão de Brasília)
+
+/* 
+Além disso, o objeto Date oferece vários métodos para exibir a data e hora de várias maneiras. Alguns exemplos são toLocaleString(), toLocaleDateString(), toLocaleTimeString(), toDateString(), toTimeString(), toISOString(), entre outros.
+*/
+
+// Setando a data do meu aniversário:
+
+var aniversario = new Date(1987, 8, 23, 7, 38, 40);
+console.log("Data de nascimento - " + aniversario);
+
+aniversario.setHours(14);// Alterando o horáro de nascimento.
+console.log("Data de nascimento, com novo horário - " + aniversario);
+
+// A data também pode ser criada por string, porém deve respeitar o padrão americano:
+
+var dataString = new Date('09/23/1987 14:00:00');
+
+console.log('Data criada com parâmetros em string - ' + dataString);
+
+// Lista de métodos para manipular datas em javascript:
+
+/*
+
+Formas de instanciar uma Data:
+
+var d = new Date();
+var d = new Date(milliseconds);
+var d = new Date(dateString);
+var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+*/
+
+//​Métodos para manipular datas:
+
+/* 
+getDate()	Returns the day of the month (from 1-31)
+
+getDay()	Returns the day of the week (from 0-6)
+
+getFullYear()	Returns the year
+
+getHours()	Returns the hour (from 0-23)
+
+getMilliseconds()	Returns the milliseconds (from 0-999)
+
+getMinutes()	Returns the minutes (from 0-59)
+
+getMonth()	Returns the month (from 0-11)
+
+getSeconds()	Returns the seconds (from 0-59)
+
+getTime()	Returns the number of milliseconds since midnight Jan 1 1970, and a specified date
+
+getTimezoneOffset()	Returns the time difference between UTC time and local time, in minutes
+
+getUTCDate()	Returns the day of the month, according to universal time (from 1-31)
+
+getUTCDay()	Returns the day of the week, according to universal time (from 0-6)
+
+getUTCFullYear()	Returns the year, according to universal time
+
+getUTCHours()	Returns the hour, according to universal time (from 0-23)
+
+getUTCMilliseconds()	Returns the milliseconds, according to universal time (from 0-999)
+
+getUTCMinutes()	Returns the minutes, according to universal time (from 0-59)
+
+getUTCMonth()	Returns the month, according to universal time (from 0-11)
+
+getUTCSeconds()	Returns the seconds, according to universal time (from 0-59)
+
+getYear()	Deprecated. Use the getFullYear() method instead
+
+now()	Returns the number of milliseconds since midnight Jan 1, 1970
+
+parse()	Parses a date string and returns the number of milliseconds since January 1, 1970
+
+setDate()	Sets the day of the month of a date object
+
+setFullYear()	Sets the year of a date object
+
+setHours()	Sets the hour of a date object
+
+setMilliseconds()	Sets the milliseconds of a date object
+
+setMinutes()	Set the minutes of a date object
+
+setMonth()	Sets the month of a date object
+
+setSeconds()	Sets the seconds of a date object
+
+setTime()	Sets a date to a specified number of milliseconds after/before January 1, 1970
+
+setUTCDate()	Sets the day of the month of a date object, according to universal time
+
+setUTCFullYear()	Sets the year of a date object, according to universal time
+
+setUTCHours()	Sets the hour of a date object, according to universal time
+setUTCMilliseconds()	Sets the milliseconds of a date object, according to universal time
+
+setUTCMinutes()	Set the minutes of a date object, according to universal time
+
+setUTCMonth()	Sets the month of a date object, according to universal time
+
+setUTCSeconds()	Set the seconds of a date object, according to universal time
+
+setYear()	Deprecated. Use the setFullYear() method instead
+
+toDateString()	Converts the date portion of a Date object into a readable string
+
+toGMTString()	Deprecated. Use the toUTCString() method instead
+
+toISOString()	Returns the date as a string, using the ISO standard
+
+toJSON()	Returns the date as a string, formatted as a JSON date
+
+toLocaleDateString()	Returns the date portion of a Date object as a string, using locale conventions
+
+toLocaleTimeString()	Returns the time portion of a Date object as a string, using locale conventions
+
+toLocaleString()	Converts a Date object to a string, using locale conventions
+
+toString()	Converts a Date object to a string
+
+toTimeString()	Converts the time portion of a Date object to a string
+
+toUTCString()	Converts a Date object to a string, according to universal time
+
+UTC()	Returns the number of milliseconds in a date since midnight of January 1, 1970, according to UTC time
+
+valueOf()	Returns the primitive value of a Date object
+*/
+
+
+
+
+
 
 
 
