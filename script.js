@@ -1383,6 +1383,87 @@ UTC()	Returns the number of milliseconds in a date since midnight of January 1, 
 valueOf()	Returns the primitive value of a Date object
 */
 
+// Variáveis
+
+//Conceito:
+
+/* 
+Em JavaScript, uma variável é um nome que representa um valor. As variáveis em JavaScript são usadas para armazenar e manipular dados.
+
+A declaração de uma variável em JavaScript é feita usando uma das três palavras-chave reservadas: var, let ou const. A escolha da palavra-chave depende do escopo da variável e se o valor dela será ou não alterado.
+
+A declaração de uma variável com var é globalmente ou localmente (para a função) escopo e pode ser redeclarada ou reatribuída:
+*/
+
+// Declarando uma variável com var
+var mensagem = "Olá, mundo!";
+
+// Redefinindo o valor da variável
+mensagem = "Olá, JavaScript!";
+
+// Declarando outra variável com var (mesmo nome)
+var mensagem = "Oi, de novo!";
+
+console.log(mensagem); // "Oi, de novo!"
+
+/* 
+A declaração de uma variável com let e const tem escopo de bloco (entre chaves {}) e não pode ser redeclarada, mas pode ser reatribuída (exceto no caso do const):
+*/
+
+// Declarando uma variável com let
+let idadeN = 18;
+
+// Redefinindo o valor da variável
+idadeN = 19;
+
+// Declarando uma variável com const
+const PI = 3.141592;
+
+// Tentando redefinir o valor da variável const (vai gerar um erro)
+//PI = 3.14;
+
+// A constante pode não pode ser reatribuída, porém pode ser modifica, como no caso abaixo:
+
+const ARRAYCONST = [];
+
+ARRAYCONST.push('Mofificando a constante');
+
+console.log(ARRAYCONST);
+
+// Outro exemplo:
+
+const OBJECTCONST = {};
+
+OBJECTCONST.change = "Constante Modificada";
+
+console.log(OBJECTCONST);
+
+/* 
+As variáveis em JavaScript podem armazenar diferentes tipos de dados, como strings, números, booleanos, objetos e até mesmo funções. A tipagem em JavaScript é dinâmica, o que significa que o tipo de uma variável pode mudar durante a execução do programa:
+*/
+
+// Declarando uma variável sem inicialização
+let nomeN;
+
+// Atribuindo um valor string à variável
+nomeN = "João";
+
+// Atribuindo um valor numérico à variável
+nomeN = 25;
+
+// Atribuindo um objeto à variável
+nomeN = { primeiroNome: "João", sobrenome: "Silva" };
+
+// A diferença entre 'let' e 'var' ocorre em relação ao escopo. O let é uma variável local de escopo limitado, ou seja, só pode ser acessada dentro do bloco de comando em que foi criada, enquanto a var é uma variável global que pode ser acessada de qualquer lugar do código.
+
+// Obs. A const também é uma variável de escopo local. 
+
+
+
+
+
+
+
 
 
 
