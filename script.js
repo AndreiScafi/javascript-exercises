@@ -1130,6 +1130,66 @@ console.log(aluno100.nome)// Será impresso no console o nome "Juan";
 
 console.log(aluno100.media());//Será impresso no console o valor da média 6;
 
+// Objetos construtores:
+
+//Conceito:
+
+/* 
+Em JavaScript, um objeto construtor é uma função que é usada para criar instâncias de objetos. Ao criar um objeto construtor, você pode definir propriedades e métodos que estarão presentes em cada instância do objeto que for criada. Essas propriedades e métodos podem ser acessados usando a notação de ponto.
+*/
+
+// Aplicação prática:
+
+
+// Objeto construtor// Essa função não é um objeto em si, mas ela retorna um objeto.
+function criarAluno(nome, n1, n2) {
+    return {
+        nome: nome,
+        nota1: n1,
+        nota2: n2,
+        media: function () {
+            return (this.nota1 + this.nota2) / 2;
+        }
+    }
+}
+
+// Criando uma Array utilizando o objeto construtor com diferentes parâmetros:
+var turma10 = [
+    criarAluno('Felipe', 5.5, 6.0),
+    criarAluno('Juliana', 8.5, 9.0),
+    criarAluno('Juan', 2.5, 4.0),
+    criarAluno('Frederico', 7.5, 8.0),
+    criarAluno('Carlos', 9.5, 10)
+]
+
+turma10.forEach(element => {
+    console.log(element.nome + " - " + element.media())
+});// Será impresso no console a lista de alunos com a suas respectivas médias. 
+
+// Outra forma de fazer o mesmo laço de repetição:
+for (var aluno of turma10) {
+    console.log(aluno.nome + " - " + aluno.media())
+};// Será impresso no console a lista de alunos com a suas respectivas médias. 
+
+// Outra forma de criar Objetos construtores:
+
+function aluno50(nome, n1, n2) {
+    this.nome = nome;
+    this.nota1 = n1;
+    this.nota2 = n2;
+
+    this.media = () => {
+        return (this.nota1 + this.nota2) / 2;
+    }
+}
+
+var alunoNovo1 = new aluno50('Pedro', 7.5, 4.0);// Foi criado um novo aluno a partir do objeto construtor.
+
+//Obs: O 'new' é utilizado para instanciar o objeto que ainda não foi crado pela função. 
+
+console.log(alunoNovo1)
+
+console.log(alunoNovo1.nome + " - " + alunoNovo1.media())// Será impresso no console as informações criadas para o novo aluno - Pedro - 5.75;
 
 
 
